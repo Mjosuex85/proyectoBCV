@@ -44,10 +44,10 @@ const Dolar = () => {
 
     return (
 
-        <div class={styles.div}>
-            <p class={styles.h1}> Precio actual del dolar BCV:  U{currency.rate}D {currency.value} </p>
+        <div class={styles.box}>
+            <h1 class={styles.h1}> Precio actual del dolar BCV:  U{currency.rate}D {currency.value} </h1>
 
-            <h4 class={styles.h1}> Introduce el monto que quieres convertir y elige el cambio </h4>
+            <h3 class={styles.h3}> Introduce el monto que quieres convertir y elige el cambio </h3>
             
             <div>
                 
