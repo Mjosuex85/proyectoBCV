@@ -2,22 +2,27 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import styles from './dolar.module.css'
+/* const styles = require('./dolar.module.css') */
+
 
 const Dolar = () => {
-    const [currency, setCurrency] = useState({})
+    const [currency, setCurrency] = useState({
+        value: 18.316000,
+        rate: "$"
+    })
     const [amount, setAmount] = useState(0)
     const [convertion, setConvertion] = useState(0)
     const [typeOfChange, setTypeOfChange] = useState("dolar")
 
-    useEffect(() => {
+    /* useEffect(() => {
         (async () => {
             await axios.get('http://localhost:3008/')
                 .then((res) => {
                     setCurrency(res.data)
                 })
         })()
-    }, [])
-
+    }, []) */
 
     const handleOnClick = (e) => {
         e.preventDefault()
@@ -38,11 +43,14 @@ const Dolar = () => {
     };
 
     return (
-        <div>
-            <h1>  Precio actual del dolar BCV:  U{currency.rate}D {currency.value} </h1>
 
-            <h4>Introduce el monto que quieres convertir y elige el cambio</h4>
+        <div class={styles.div}>
+            <p class={styles.h1}> Precio actual del dolar BCV:  U{currency.rate}D {currency.value} </p>
+
+            <h4 class={styles.h1}> Introduce el monto que quieres convertir y elige el cambio </h4>
+            
             <div>
+                
                 <input onChange={(e) => handleOnChange(e)} type="number" />
                 <select onChange={(e) => convert(e)}>
                     <option value="dolar">U$D a Bs</option>
@@ -53,6 +61,7 @@ const Dolar = () => {
                 <button onClick={(e) => handleOnClick(e)}>
                     convertir
                 </button>
+
             </div>
 
             <h4>Total: { typeOfChange === 'dolar' ? "Bs" : "U$D" } {convertion}</h4>
