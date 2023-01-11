@@ -1,12 +1,10 @@
-/* .div {
-    
-} */
+
 
 .box{
     width: 300px;
-    background:rgb(179, 26, 26); 
-    opacity: 75%;
-    margin-top: 0%;
+    background:url("https://live.mrf.io/statics/i/ps/maduradas.com/wp-content/uploads/2014/11/Hugo-Chavez-Frias-hablando-del-Dolar-Paralelo-Dolar-Negro-en-Venezuela-800x533.jpg?width=fixed&enable=upscale")no-repeat;
+/*     opacity: 75%;
+ */    margin-top: 0%;
     padding: 20px;
     /* color: white;
     text-align: center; */
@@ -14,6 +12,7 @@
     position: relative;
     left: 25px;
     top: 10px;
+    box-shadow: 10px 15px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 
