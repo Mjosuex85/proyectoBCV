@@ -5,24 +5,38 @@ import { useEffect } from 'react'
 import styles from './dolar.module.css'
 /* const styles = require('./dolar.module.css') */
 
-
 const Dolar = () => {
-    const [currency, setCurrency] = useState({
-        value: 18.316000,
-        rate: "$"
-    })
+
+    const [currency, setCurrency] = useState({})
     const [amount, setAmount] = useState(0)
     const [convertion, setConvertion] = useState(0)
     const [typeOfChange, setTypeOfChange] = useState("dolar")
 
-    /* useEffect(() => {
+    // este estado es para setear que se está trabajando sin servidor
+    const [prov, setProv] = useState(false)
+
+    useEffect(() => {
         (async () => {
-            await axios.get('http://localhost:3008/')
-                .then((res) => {
-                    setCurrency(res.data)
+
+            try {
+                await axios.get('http://localhost:3008/')
+                    .then((res) => {
+                        setCurrency(res.data)
+                    })
+                  
+            }
+
+            catch(error) {
+                console.log(error)
+                setCurrency({
+                    value: 18.316000,
+                    rate: "$"
                 })
+                setProv(true)
+            }
+
         })()
-    }, []) */
+    }, [])
 
     const handleOnClick = (e) => {
         e.preventDefault()
@@ -45,7 +59,7 @@ const Dolar = () => {
     return (
 
         <div class={styles.div}>
-            <p class={styles.h1}> Precio actual del dolar BCV:  U{currency.rate}D {currency.value} </p>
+            <p class={styles.h1}> Precio actual del dolar BCV:  U{currency.rate}D {currency.value} {prov ? `<<< REF, conectar al servidor` : ""} </p> 
 
             <h4 class={styles.h1}> Introduce el monto que quieres convertir y elige el cambio </h4>
             

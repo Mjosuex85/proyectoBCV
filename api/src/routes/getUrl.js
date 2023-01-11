@@ -1,7 +1,6 @@
 const { Router } = require('express');
 const router = Router()
 const { getInfoBcv } = require('../controllers/puppeteer/bet_info_bcv.js');
-const { getInfoTest } = require('../controllers/puppeteer/get_info_test.js');
 
 router.get('/', async (req, res) => {
     
@@ -17,17 +16,6 @@ router.get('/', async (req, res) => {
         console.log(error)
     }
     
-});
-
-router.get('/test', async (req, res) => {
-    try {
-        const info = await getInfoTest
-        res.status(200).send([info]);
-    }
-
-    catch(error) {
-        console.log(error)
-    }
 });
 
 module.exports = router;

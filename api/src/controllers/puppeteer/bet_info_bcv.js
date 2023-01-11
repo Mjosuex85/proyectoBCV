@@ -15,7 +15,7 @@ const getInfoBcv = (async () => {
         console.log(
             {
                 error: error,
-                file: '"/api/src/controllers/getInfo.js"',
+                file: (__dirname),
                 observation: 'Normaly "this.file" has the dir where de file is, now is commented ',
                 desription: "firts URL request, from the bot puppeteer"
             })
@@ -36,8 +36,8 @@ const getInfoBcv = (async () => {
     // cierra el navegador
     await browser.close();
     // returna el array con la info
-    console.log("BCV data is a ",typeof parseInt(tagHtml)) // number
-    return parseInt(tagHtml) 
+    console.log("BCV data is", tagHtml.replace(",",".")) // number
+    return parseInt(tagHtml.replace(",",".")) 
 
 })();
 
