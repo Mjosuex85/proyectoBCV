@@ -78,7 +78,7 @@ const Dolar = () => {
 
             </div>
 
-            <h4 class={styles.button}>Total: { typeOfChange === 'dolar' ? "Bs" : "U$D" } {convertion}</h4>
+            <h4 class={styles.h4}>Total: { typeOfChange === 'dolar' ? "Bs" : "U$D" } {convertion}</h4>
 
         </div>
 
