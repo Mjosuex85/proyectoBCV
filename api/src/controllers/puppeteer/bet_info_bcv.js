@@ -13,8 +13,7 @@ const getInfoBcv = (async () => {
 
     catch (error) {
         console.log(
-            {
-                error: error,
+            { error: error,
                 file: (__dirname),
                 observation: 'Normaly "this.file" has the dir where de file is, now is commented ',
                 desription: "firts URL request, from the bot puppeteer"
@@ -41,6 +40,8 @@ const getInfoBcv = (async () => {
 
 })();
 
+
+// aqui exporto la función para modularizar
 
 module.exports = {
     getInfoBcv
