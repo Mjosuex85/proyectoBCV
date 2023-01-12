@@ -72,13 +72,13 @@ const Dolar = () => {
                 </select>
                 <br/>
                 <br/>
-                <button onClick={(e) => handleOnClick(e)}>
+                <button class={styles.button} onClick={(e) => handleOnClick(e)}>
                     convertir
                 </button>
 
             </div>
 
-            <h4>Total: { typeOfChange === 'dolar' ? "Bs" : "U$D" } {convertion}</h4>
+            <h4 class={styles.button}>Total: { typeOfChange === 'dolar' ? "Bs" : "U$D" } {convertion}</h4>
 
         </div>
 

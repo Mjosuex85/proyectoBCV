@@ -10,7 +10,7 @@
     text-align: center; */
     border-radius: 15px;
     position: relative;
-    left: 25px;
+    left: 200px;
     top: 10px;
     box-shadow: 10px 15px 10px 15px rgba(0, 0, 0, 0.2);
 }
@@ -29,3 +29,21 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.box button{
+    position: relative;
+    left: 75px;
+    top: 5px;
+    box-shadow: 10px 15px 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgb(84, 165, 91);
+    vertical-align:middle
+
+}
+
+.box h4{
+    position: relative;
+    left: 5px;
+    top: 10px;
+    box-shadow: 10px 15px 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgb(84, 165, 91);
+    vertical-align:middle
+}
