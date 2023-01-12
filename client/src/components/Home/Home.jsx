@@ -1,5 +1,5 @@
 import React from 'react'
-import Dolar from './Dolar.jsx'
+import Dolar from "../Dolar/Dolar.jsx"
 
 const Home = () => {
 
